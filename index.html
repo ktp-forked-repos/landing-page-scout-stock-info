@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:image" content="fb_cover.png">
+    <meta name="description" content="Prawa do użytkowania zawartości serwisu stock.zhp.pl. Zapoznaj się z zasadami i korzystaj z bazy harcerskich zdjęć.">
+    <title>Stock | Związek Harcerstwa Polskiego</title>
+    <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&amp;subset=latin-ext" rel="stylesheet">
+</head>
+<body>
+<div class="full-height">
+    <div class="left"><!-- bg-image --></div>
+    <div class="right">
+        <div class="content">
+            <div class="logo">
+                <a href="https://zhp.pl"><img src="logo.png" alt="logo_zhp"></a>
+            </div>
+            <form id="agree_form">
+                <div class="regulations">
+                    <h1>Prawa do użytkowania zawartości serwisu</h1>
+                    Zawartość stock.zhp.pl jest chroniona prawami autorskimi, a użycie komercyjne
+                    zawartości serwisu jest niedozwolone.
+                    Wykorzystywanie fotografii na innych prawach niż warunki publicznej licencji (CCPL) lub prawach
+                    autorskich jest zakazane.
+                    Aby użyć fotografii należy oznaczyć je ©ZHP / fot. imię i nazwisko autora.
+                </div>
+                <label for="agree" class="agree">
+                    <input type="checkbox" id="agree" name="agree"> Rozumiem i akceptuję
+                </label>
+                <input type="submit" class="button disable" value="Przejdź dalej">
+            </form>
+        </div>
+        <div class="copyright">
+            Copyright © 1997-2017 Związek Harcerstwa Polskiego
+        </div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){localStorage.getItem("stock_agree")&&window.location.replace("https://zhp.filecamp.com/public/files/2g5i-l2e7iguf/2g5i-l2e7iguf"),$("#agree").on("change",function(){$("#agree").prop("checked")?$("#agree_form").find("input").removeClass("disable"):$("#agree_form").find("input").addClass("disable")}),$("#agree_form").on("submit",function(e){e.preventDefault(),$("#agree").prop("checked")?(localStorage.setItem("stock_agree",!0),window.location.replace("https://zhp.filecamp.com/public/files/2g5i-l2e7iguf/2g5i-l2e7iguf")):alert("Aby przejść dalej musisz zaakceptować Prawa do użytkowania zawartości serwisu.")})});
+</script>
+</body>
+</html>
